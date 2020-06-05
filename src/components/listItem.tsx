@@ -28,7 +28,7 @@ const ListItem: React.SFC<ListItemProps> = ({ data, setSerialId }) => {
     <Item onClick={() => onCLick(data.show.id)}>
       <Card>
         <CardActionArea>
-          <img src={data.show.image.medium}/>
+          {data.show.image && data.show.image.medium && <img src={data.show.image.medium}/>}
           <CardContent>
             <Typography gutterBottom variant="h6" component="h2">
               {data.show.name}
